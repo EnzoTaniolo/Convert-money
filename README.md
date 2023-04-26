@@ -5,6 +5,7 @@ Utilizei as tecnologias:
 * CSS
 * JAVASCRIPT
 
-O projeto é Responsivo, e converte de Real para Dólar, Euro e Bitcoin. 
+O projeto é Responsivo, e converte de Real para Dólar, Euro e Bitcoin.<br>
+(obs: para acessar o projeto vá até a branch Master!)
 
 <img src="https://github.com/EnzoTaniolo/Convert-money/blob/master/assets/convert%20moneyy.jpg">
