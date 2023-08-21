@@ -4,18 +4,17 @@ const button = document.getElementById('convert-button')
 const select = document.getElementById('select-currency')
 // toda vez que trocamos a informação desse select, disparamos um evento de change
 
-const dolar = 5.05
-const euro = 5.54
-const btc = 143537.00
-
-// --------------------
-
-const convertValues = () => {
+const convertValues = async () => {
     const inputReais = document.getElementById("input-real").value
     const realValueText = document.getElementById('real-value-text')
     const currencyValueText = document.getElementById('currency-value')
 
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL").then(response => response.json())
 
+    const dolar = data.USDBRL.high
+    const euro = data.EURBRL.high
+    const btc = data.BTCBRL.high
+    
     realValueText.innerHTML = new Intl.NumberFormat('pt-br',
         {
             style: 'currency',
@@ -41,7 +40,7 @@ const convertValues = () => {
         ).format(inputReais / euro)
     }
 
-    if(select.value === '₿ Bitcoin'){
+    if (select.value === '₿ Bitcoin') {
         currencyValueText.innerHTML = '₿ ' + (inputReais / btc).toFixed(7)
     }
 
@@ -61,7 +60,7 @@ const changeCurrency = () => {
         currencyImg.src = './assets/estados-unidos.png'
     }
 
-    if (select.value === '₿ Bitcoin'){
+    if (select.value === '₿ Bitcoin') {
         currencyName.innerHTML = 'Bitcoin'
         currencyImg.src = './assets/bitcoin.png'
     }

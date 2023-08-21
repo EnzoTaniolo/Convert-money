@@ -9,22 +9,30 @@
 
 body{
     background-color: #E5E5E5;
+    /*  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 .container {
     width: 375px;
     background-color: #f4f4f4;
-    margin: 0 auto;
-    margin-top: 100px;
+    /* margin: 0 auto;
+    margin-top: 100px; */
 }
 
 header {
     background-color: #1B83E2;
     height: 66px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
-    padding-top: 24px;
-    text-align: center;
+    /* padding-top: 24px;
+    text-align: center; */
     font-weight: 400;
     font-size: 24px;
     color: #F4F4F4;
@@ -94,17 +102,27 @@ section {
     width: 100%;
     border: 1px solid #1B83E2;
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* nesse caso usamos apenas o align items, pois o eixo secundario 
+    do column é o HORIZONTAL, por tanto alinharemos ao meio */
+    gap: 15px;
 }
 
 .section-container {
-    text-align: center;
+    /* text-align: center; */
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* nesse caso usamos apenas o align items, pois o eixo secundario 
+    do column é o HORIZONTAL, por tanto alinharemos ao meio */
+    gap: 2px;
 }
 
-#seta {
+/* #seta {
     display: block;
     margin: 15px auto;
-}
+} */
 
 .currency-name {
     font-weight: 400;
